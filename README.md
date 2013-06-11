@@ -22,7 +22,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+In your application.rb file add a line like:
+
+```ruby
+AppConfig = SettingsStore::SettingsHash.new
+
+# config/initializers/foo_setup.rb
+AppConfig.foobar = :fizzbuzz
+```
+
+If you wish to use namespacing, make a toplevel OrderedOptions instance that
+builds default values from SettingsStore::SettingsHash
+
+```ruby
+AppConfig =  ActiveSupport::OrderedOptions.new { |h, k| h[k] = SettingsStore::SettingsHash.new }
+
+# config/initializers/mailgrid_setup.rb
+AppConfig.mailgrid.key = "123456789abc"
+AppConfig.mailgrid.secret = "secret123"
+```
 
 ## Contributing
 

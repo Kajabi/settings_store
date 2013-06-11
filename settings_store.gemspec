@@ -4,8 +4,8 @@ require File.expand_path('../lib/settings_store/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Brendon Murphy"]
   gem.email         = ["xternal1+github@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.summary       = %q{A very simple hash like store for App settings}
+  gem.description   = gem.summary
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)

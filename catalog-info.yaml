@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: settings-store
+  description: |
+    A very simple hash like store for App settings. The main reason for this is to behave differently than an hash and raise NoMethodError for unset values, as opposed to just grabbing a nil.
+  annotations:
+    backstage.io/source-location: url:https://github.com/Kajabi/settings-store/tree/main
+    github.com/project-slug: Kajabi/settings-store
+spec:
+  system: kajabi-products
+  type: gem
+  owner: standard-model
+  lifecycle: production
